@@ -1,0 +1,18 @@
+name: react_ext
+dependencies:
+  - python
+  - react
+text: |
+  ## Install some specific react packages
+  # Install Material-UI; squelch warnings for fsevents+OSX bullshit
+  NPM typescript
+  NPM recharts
+  NPM @material-ui/core
+  NPM @material-ui/icons
+  NPM typeface-roboto
+
+  # React DnD for drag-n-drop functionality
+  RUN npm --loglevel=error install react-dnd react-dnd-html5-backend
+
+  # Archer for drawing arrows
+  RUN npm --loglevel=error install react-archer

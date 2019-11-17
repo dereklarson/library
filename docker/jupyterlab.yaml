@@ -1,0 +1,25 @@
+name: jupyterlab
+dependencies:
+  - python
+text: |
+  ## This installs jupyterlab, which will set up a server
+
+  PIP3 jupyterlab
+  PIP3 pandas
+
+  # Install Tini, a requirement to stably run a docker container with a jupyter server
+  # Optionally, docker can be run with the --init arg (newer docker ver. contains tini)
+  ADD https://github.com/krallin/tini/releases/download/v0.18.0/tini /usr/bin/tini
+  RUN chmod +x /usr/bin/tini
+  ENTRYPOINT ["/usr/bin/tini", "--"]
+
+  # We will want to support individual users environments with Jupyter lab
+  RUN useradd -ms /bin/bash jovyan
+  USER jovyan
+  WORKDIR /home/jovyan/
+
+  # Load a default initial config -- includes a basic theme
+  ADD --chown=jovyan jupyter /home/jovyan/
+  RUN mkdir scratch notebooks
+
+  CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--LabApp.token=''"]

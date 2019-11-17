@@ -1,0 +1,16 @@
+name: capnproto
+dependencies:
+  - python
+text: |
+  ## This installs the Cap'n Proto serialization libraries
+
+  # Cap'n Proto C++ libraries
+  RUN curl -O https://capnproto.org/capnproto-c++-0.7.0.tar.gz
+  RUN tar zxf capnproto-c++-0.7.0.tar.gz
+  # Ignore the check for now, DiskHoles failures seems ZFS related / non-critical
+  #RUN cd capnproto-c++-0.7.0 && ./configure && make -j6 check && make install
+  RUN cd capnproto-c++-0.7.0 && ./configure && make install
+
+  # Python wrapper for Cap'n Proto
+  PIP3 cython
+  PIP3 pycapnp

@@ -1,0 +1,16 @@
+name: ubuntu
+type: base
+dependencies:
+  - python
+text: |
+  FROM ubuntu:18.04
+
+  ## This installs a generally useful Linux environment
+  USER root
+
+  APTGET build-essential
+  APTGET git
+  APTGET curl
+  APTGET vim
+  APTGET sudo
+  APTGET wget

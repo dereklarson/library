@@ -1,0 +1,13 @@
+name: python
+dependencies: []
+text: |
+  ## This installs a working python 3 environment
+  
+  # Python 3 packages\n
+  APTGET python-pip
+  APTGET python-dev
+  APTGET python3
+  APTGET python3-dev
+  APTGET python3-pip
+  APTGET python3-setuptools
+  PIP3 wheel

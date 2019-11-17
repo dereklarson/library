@@ -1,0 +1,9 @@
+name: gcp
+dependencies:
+  - python
+text: |
+  ## This installs python tools for using Google Cloud Platform services
+
+  PIP3 google-cloud-bigquery
+  PIP3 google-cloud-pubsub
+  PIP3 google-cloud-storage

@@ -1,0 +1,15 @@
+name: debian
+type: base
+dependencies: []
+text: |
+  FROM debian:buster
+
+  ## This installs a generally useful Linux environment
+  USER root
+
+  APTGET build-essential
+  APTGET git
+  APTGET curl
+  APTGET vim
+  APTGET sudo
+  APTGET wget
