@@ -5,7 +5,6 @@ text: |
   ## This installs jupyterlab, which will set up a server
 
   PIP3 jupyterlab
-  PIP3 pandas
 
   # Install Tini, a requirement to stably run a docker container with a jupyter server
   # Optionally, docker can be run with the --init arg (newer docker ver. contains tini)

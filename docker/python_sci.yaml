@@ -1,0 +1,11 @@
+name: python_sci
+dependencies:
+  - python
+text: |
+  # Python 3 packages
+  PIP3 numpy
+  PIP3 scipy
+  PIP3 scikit-learn
+  PIP3 matplotlib
+  PIP3 seaborn
+  PIP3 pandas
