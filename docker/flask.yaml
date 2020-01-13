@@ -8,6 +8,6 @@ text: |
   PIP3 flask
 
   # Production Flask server build
-  RUN npm run build && mv build/* .
-  ADD python/serve.py /project/
-  ENTRYPOINT ["python3", "serve.py"]
+  # RUN npm run build && mv build/* .
+  # ADD python/serve.py /project/
+  # ENTRYPOINT ["python3", "serve.py"]

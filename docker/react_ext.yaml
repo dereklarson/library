@@ -1,6 +1,5 @@
 name: react_ext
 dependencies:
-  - python
   - react
 text: |
   ## Install some specific react packages
@@ -12,7 +11,13 @@ text: |
   NPM typeface-roboto
 
   # React DnD for drag-n-drop functionality
-  RUN npm --loglevel=error install react-dnd react-dnd-html5-backend
+  NPM react-dnd
+  NPM react-dnd-html5-backend 
 
-  # Archer for drawing arrows
-  RUN npm --loglevel=error install react-archer
+  NPM react-ace
+  NPM ace-builds
+  NPM reactjs-popup
+  NPM react-sweet-progress
+
+  # Dagre helps calculate how to draw diagrams
+  NPM dagre 

@@ -23,3 +23,8 @@ text: |
 
   # Install the latest Docker version of Community Edition
   RUN sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+  # Get the credential helper for Docker+GoogleCloudRepo
+  RUN curl -fsSL "https://github.com/GoogleCloudPlatform/docker-credential-gcr/releases/download/v2.0.0/docker-credential-gcr_linux_amd64-2.0.0.tar.gz" \
+    | tar xz --to-stdout ./docker-credential-gcr \
+    > /usr/bin/docker-credential-gcr && chmod +x /usr/bin/docker-credential-gcr

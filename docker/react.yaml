@@ -9,8 +9,9 @@ text: |
 
   # Redux for managing data state effectively
   NPM axios
-  NPM redux
+  NPM lodash
   NPM react-redux
+  NPM redux
   NPM redux-thunk
 
   # Start a project, populate with the JSX from your ./react directory
