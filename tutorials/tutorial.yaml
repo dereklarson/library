@@ -1,0 +1,24 @@
+# This file defines a full sample diagram configuration
+name: test_tutorial
+series:
+  - text: Add base image
+    state: 
+      docker_vertices:
+      - children: []
+        name: ubuntu
+        parents: []
+        sections: ['ubuntu']
+  - text: Add python
+    state: 
+      docker_vertices:
+      - children: [1]
+        name: ubuntu
+        parents: []
+        sections: ['ubuntu']
+      - children: []
+        name: python
+        parents: [0]
+        sections: ['python']
+  - text: Click python
+    state:
+      focus: 1
