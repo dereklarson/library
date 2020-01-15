@@ -7,14 +7,14 @@ text: |
   RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
   APTGET nodejs
 
+  # Start a project, populate with the JSX from your ./react directory
+  RUN npx create-react-app deployed_app
+  RUN rm -f /deployed_app/src/*
+  WORKDIR /deployed_app/
+
   # Redux for managing data state effectively
   NPM axios
   NPM lodash
   NPM react-redux
   NPM redux
   NPM redux-thunk
-
-  # Start a project, populate with the JSX from your ./react directory
-  RUN npx create-react-app deployed_app
-  RUN rm -f /deployed_app/src/*
-  WORKDIR /deployed_app/
