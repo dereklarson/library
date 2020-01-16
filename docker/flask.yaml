@@ -6,8 +6,4 @@ text: |
   ## This sets up Flask for hosting a React app
 
   PIP3 flask
-
-  # Production Flask server build
-  # RUN npm run build && mv build/* .
-  # ADD python/serve.py /project/
-  # ENTRYPOINT ["python3", "serve.py"]
+  PIP3 GitPython
