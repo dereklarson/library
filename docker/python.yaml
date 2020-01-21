@@ -1,4 +1,5 @@
 name: python
+location: docker
 dependencies: []
 text: |
   ## This installs a working python 3 environment

@@ -1,4 +1,5 @@
 name: jupyterlab
+location: docker
 dependencies:
   - python
 text: |

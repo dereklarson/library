@@ -1,4 +1,5 @@
 name: debian
+location: docker
 type: base
 dependencies: []
 text: |

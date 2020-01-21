@@ -1,4 +1,5 @@
 name: gcp
+location: docker
 dependencies:
   - python
 text: |

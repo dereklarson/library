@@ -1,4 +1,5 @@
 name: ubuntu
+location: docker
 type: base
 dependencies:
   - python

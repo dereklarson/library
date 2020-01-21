@@ -1,4 +1,5 @@
 name: capnproto
+location: docker
 dependencies:
   - python
 text: |

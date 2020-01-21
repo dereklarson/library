@@ -1,4 +1,5 @@
 name: flask
+location: docker
 dependencies:
   - python
   - react

@@ -1,4 +1,5 @@
 name: metadocker
+location: docker
 dependencies:
   - python
 text: |

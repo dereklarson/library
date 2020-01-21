@@ -1,4 +1,5 @@
 name: react
+location: docker
 dependencies:
   - python
 text: |

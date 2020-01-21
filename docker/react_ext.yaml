@@ -1,4 +1,5 @@
 name: react_ext
+location: docker
 dependencies:
   - react
 text: |

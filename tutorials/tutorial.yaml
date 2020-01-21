@@ -1,5 +1,6 @@
 # This file defines a full sample diagram configuration
 name: test_tutorial
+location: tutorial
 series:
   - text: Add base image
     state: 
