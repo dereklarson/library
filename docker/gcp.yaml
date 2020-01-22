@@ -5,6 +5,13 @@ dependencies:
 text: |
   ## This installs python tools for using Google Cloud Platform services
 
+  PIP3 google-auth
   PIP3 google-cloud-bigquery
   PIP3 google-cloud-pubsub
   PIP3 google-cloud-storage
+  PIP3 google-cloud-logging
+  PIP3 google-cloud-monitoring
+  PIP3 google-api-python-client
+  PIP3 google-auth-oauthlib
+  PIP3 apache-beam[gcp]
+  PIP3 google-resumable-media

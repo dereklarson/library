@@ -22,3 +22,5 @@ text: |
 
   # Dagre helps calculate how to draw diagrams
   NPM dagre 
+  NPM react-hotkeys
+  NPM reselect
