@@ -13,5 +13,6 @@ text: |
   APTGET python3-dev
   APTGET python3-pip
   APTGET python3-setuptools
+  RUN alias python=python3
   PIP3 wheel
   PIP3 pyyaml
