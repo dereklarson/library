@@ -1,4 +1,4 @@
-name: metadocker
+uid: metadocker
 location: docker
 dependencies:
   - python

@@ -1,4 +1,4 @@
-name: gcp
+uid: gcp
 location: docker
 dependencies:
   - python

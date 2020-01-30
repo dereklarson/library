@@ -1,4 +1,4 @@
-name: ubuntu
+uid: ubuntu
 location: docker
 type: base
 dependencies:

@@ -1,4 +1,4 @@
-name: python
+uid: python
 location: docker
 dependencies: []
 text: |
@@ -15,4 +15,4 @@ text: |
   APTGET python3-setuptools
   RUN alias python=python3
   PIP3 wheel
-  PIP3 pyyaml
+  PIP3 pyyaml jinja2

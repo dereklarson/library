@@ -1,4 +1,4 @@
-name: debian
+uid: debian
 location: docker
 type: base
 dependencies: []

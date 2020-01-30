@@ -1,4 +1,4 @@
-name: capnproto
+uid: capnproto
 location: docker
 dependencies:
   - python

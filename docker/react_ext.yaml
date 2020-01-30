@@ -1,4 +1,4 @@
-name: react_ext
+uid: react_ext
 location: docker
 dependencies:
   - react

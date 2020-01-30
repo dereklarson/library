@@ -1,4 +1,4 @@
-name: python_ext
+uid: python_ext
 location: docker
 dependencies: ['python']
 text: |

@@ -1,4 +1,4 @@
-name: react
+uid: react
 location: docker
 dependencies:
   - python
@@ -14,8 +14,6 @@ text: |
   WORKDIR /deployed_app/
 
   # Redux for managing data state effectively
-  NPM axios
-  NPM lodash
-  NPM react-redux
-  NPM redux
-  NPM redux-thunk
+  NPM axios lodash react-app-rewired
+  NPM redux react-redux redux-logger
+  NPM redux-undo redux-thunk @reduxjs/toolkit
