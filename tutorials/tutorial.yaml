@@ -2,24 +2,36 @@
 name: test_tutorial
 location: tutorial
 series:
+  - text: Load library
+    state:
+      library:
+        docker:
+          ubuntu:
+            uid: ubuntu
+            text: "# Ubuntu operations"
+          python:
+            uid: python
+            text: "# Python operations"
   - text: Add base image
     state: 
-      docker_vertices:
-      - children: []
-        name: ubuntu
-        parents: []
-        sections: ['ubuntu']
+      vertices:
+        docker:
+          ubuntu:
+            children: {}
+            uid: ubuntu
+            parents: {}
+            sections: ['ubuntu']
   - text: Add python
     state: 
-      docker_vertices:
-      - children: [1]
-        name: ubuntu
-        parents: []
-        sections: ['ubuntu']
-      - children: []
-        name: python
-        parents: [0]
-        sections: ['python']
-  - text: Click python
-    state:
-      focus: 1
+      vertices:
+        docker:
+          ubuntu:
+            children: {python}
+            uid: ubuntu
+            parents: {}
+            sections: ['ubuntu']
+          python:
+            children: {}
+            uid: python
+            parents: {ubuntu}
+            sections: ['python']
