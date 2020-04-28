@@ -1,0 +1,9 @@
+uid: filterset
+location: dash
+dependencies: []
+text: |
+  {
+      "type": "filters",
+      "position": [1, 0],
+      "args": {"columns": ["state"]}
+  }

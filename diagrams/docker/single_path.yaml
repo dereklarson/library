@@ -1,0 +1,10 @@
+# This file defines the structure of a docker container in terms of library segments
+
+name: single_path
+type: diagram
+location: docker
+paths:
+  - 
+    - uid: ubuntu
+    - uid: python
+    - uid: gcp

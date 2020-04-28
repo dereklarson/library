@@ -1,0 +1,10 @@
+uid: timestamp_random
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  def process(self, element):
+      current_ts = datetime.utcnow().timestamp()
+      # Randomly pre-date uniformly by up to 5 minutes
+      timestamp = 1000 * (current_ts - random.randint(1, 300))
+      return window.TimestampedValue(element, timestamp)

@@ -1,0 +1,13 @@
+uid: python
+location: docker
+dependencies: []
+text: |
+  ## This installs a working python 3.8 environment
+  # Python 3.8 packages\n
+  APT python3.8 python3.8-dev python3-pip python3-setuptools
+
+  # Install broadly used python packages
+  PIP wheel pyyaml prettyprinter parse tqdm apscheduler
+
+  # We want to be able to load our local packages for use in Jupyter, etc.
+  ENV PYTHONPATH "${PYTHONPATH}:/usr/local/lib/python3.8/site-packages"

@@ -1,29 +1,20 @@
 uid: metadocker
 location: docker
-dependencies:
-  - python
+dependencies: []
 text: |
   ## This installs everything needed to build docker images
-
   # Install needed system packages for Docker
-  APTGET apt-transport-https
-  APTGET ca-certificates
-  APTGET gnupg-agent
-  APTGET software-properties-common
+  APT apt-transport-https ca-certificates gnupg-agent software-properties-common
 
-  # Add Docker's official GPG key
+  # Add Docker's official GPG key and repository
   RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-  # Set up the stable version of the Docker repo
   RUN sudo add-apt-repository \
-     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-     $(lsb_release -cs) stable"
-  RUN sudo apt-get update
+     "deb [arch=amd64] https://download.docker.com/linux/ubuntu eoan stable"
+   # "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   # $(lsb_release -cs) stable"
 
   # Install the latest Docker version of Community Edition
-  APTGET docker-ce
-  APTGET docker-ce-cli
-  APTGET containerd.io
+  APT docker-ce docker-ce-cli containerd.io
 
   # Get the credential helper for Docker+GoogleCloudRepo
   RUN curl -fsSL "https://github.com/GoogleCloudPlatform/docker-credential-gcr/releases/download/v2.0.0/docker-credential-gcr_linux_amd64-2.0.0.tar.gz" \

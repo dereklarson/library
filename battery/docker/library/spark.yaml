@@ -1,0 +1,9 @@
+uid: pyspark
+location: docker
+dependencies:
+  - python
+text: |
+  ## This installs the requirements for Python Spark
+  APT openjdk-8-jre-headless ca-certificates-java
+  PIP pyspark
+  ENV PYSPARK_PYTHON=/usr/bin/python3

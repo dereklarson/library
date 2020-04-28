@@ -1,0 +1,12 @@
+uid: output_fw
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  # Here we signify an output via local file
+  def process(self, element):
+      with open(f"output.txt", 'a') as fh:
+          fh.write(str(element) + "\n")

@@ -1,0 +1,48 @@
+location: docker
+associations:
+  datasets: {}
+  library:
+    jupyterlab:
+    - jupyterlab
+    metadocker:
+    - metadocker
+    nodejs:
+    - nodejs
+    python:
+    - python
+    - flask
+    - python_sci
+    - gcp
+    ubuntu:
+    - ubuntu
+  styles: {}
+corpus: {}
+vertices:
+  jupyterlab:
+    uid: jupyterlab
+    children: {}
+    parents:
+      nodejs: true
+  metadocker:
+    uid: metadocker
+    children: {}
+    parents:
+      python: true
+  nodejs:
+    uid: nodejs
+    children:
+      jupyterlab: true
+    parents:
+      python: true
+  python:
+    uid: python
+    children:
+      metadocker: true
+      nodejs: true
+    parents:
+      ubuntu: true
+  ubuntu:
+    uid: ubuntu
+    children:
+      python: true
+    parents: {}

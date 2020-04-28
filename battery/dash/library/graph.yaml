@@ -1,0 +1,5 @@
+uid: graph
+location: dash
+dependencies: []
+text: |
+  {"type": "graph", "position": [2, 0], "args": {}}

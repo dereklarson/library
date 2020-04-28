@@ -1,0 +1,17 @@
+uid: split
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element)
+  def process(self, element):
+      keys = ['idx', 'symbol', 'date', 'open', 'high', 'low', 'close', 'volume']
+      data = dict(zip(keys, element.split(",")))
+      result = [{
+          'date': data['date'],
+          'symbol': data['symbol'],
+          'open': float(data['open']),
+          'close': float(data['close']),
+      }]
+      return result

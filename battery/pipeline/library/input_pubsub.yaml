@@ -1,0 +1,14 @@
+uid: input_pubsub
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  # Here we signify an input via local file
+  ARG/VAR ["options.view_as(StandardOptions).streaming", "True"]
+  ARG/VAR ["options.view_as(SetupOptions).save_main_session", "True"]
+  ARG/STR ["subscription", "projects/backend-243722/subscriptions/stock_in_sub"]
+  INPUT/PUBSUB {"subscription": "subscription"}
+  DECODE

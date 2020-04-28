@@ -1,0 +1,11 @@
+uid: output_pubsub
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  ARG/STR ["topic", "projects/backend-243722/topics/stock_output"]
+  ENCODE
+  OUTPUT/PUBSUB {"topic": "topic"}

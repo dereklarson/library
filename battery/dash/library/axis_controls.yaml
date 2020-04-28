@@ -1,0 +1,9 @@
+uid: axis_controls
+location: dash
+dependencies: []
+text: |
+  {
+      "type": "axis_controls",
+      "position": [0, 0],
+      "args": {"use": "xy"}
+  }

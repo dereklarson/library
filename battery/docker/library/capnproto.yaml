@@ -13,5 +13,4 @@ text: |
   RUN cd capnproto-c++-0.7.0 && ./configure && make install
 
   # Python wrapper for Cap'n Proto
-  PIP3 cython
-  PIP3 pycapnp
+  PIP cython pycapnp

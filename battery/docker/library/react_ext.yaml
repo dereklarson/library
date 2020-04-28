@@ -5,22 +5,18 @@ dependencies:
 text: |
   ## Install some specific react packages
   # Install Material-UI; squelch warnings for fsevents+OSX bullshit
-  NPM typescript
-  NPM recharts
-  NPM @material-ui/core
-  NPM @material-ui/icons
-  NPM typeface-roboto
+  NPM @material-ui/core @material-ui/icons typeface-roboto
 
   # React DnD for drag-n-drop functionality
-  NPM react-dnd
-  NPM react-dnd-html5-backend 
+  NPM react-dnd react-dnd-html5-backend 
 
-  NPM react-ace
-  NPM ace-builds
-  NPM reactjs-popup
-  NPM react-sweet-progress
+  # Ace is an embeddable text editor handling many syntaxes
+  NPM react-ace ace-builds
 
   # Dagre helps calculate how to draw diagrams
   NPM dagre 
+  NPM react-sweet-progress
+
+  # NPM recharts
   NPM react-hotkeys
-  NPM reselect
+  NPM typescript

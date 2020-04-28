@@ -1,0 +1,13 @@
+uid: python_sci
+location: docker
+dependencies:
+  - python
+text: |
+  # Scientific processing
+  PIP numpy scipy pandas scikit-learn fuzzywuzzy[speedup]
+
+  # Visualization
+  PIP matplotlib seaborn dash dash-bootstrap-components
+
+  # Data and other packages
+  PIP iso3166

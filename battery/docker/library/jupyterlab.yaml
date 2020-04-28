@@ -2,10 +2,11 @@ uid: jupyterlab
 location: docker
 dependencies:
   - python
+  # NOTE add this back in after ubuntu 20.04 release 
+  # - nodejs
 text: |
   ## This installs jupyterlab, which will set up a server
-
-  PIP3 jupyterlab
+  PIP jupyterlab
 
   # Install Tini, a requirement to stably run a docker container with a jupyter server
   # Optionally, docker can be run with the --init arg (newer docker ver. contains tini)
@@ -13,13 +14,8 @@ text: |
   RUN chmod +x /usr/bin/tini
   ENTRYPOINT ["/usr/bin/tini", "--"]
 
-  # We will want to support individual users environments with Jupyter lab
-  RUN useradd -ms /bin/bash jovyan
-  USER jovyan
-  WORKDIR /home/jovyan/
+  PIP jupytext
+  RUN jupyter nbextension install --py jupytext
+  RUN jupyter nbextension enable --py jupytext
 
-  # Load a default initial config -- includes a basic theme
-  ADD --chown=jovyan jupyter /home/jovyan/
-  RUN mkdir scratch notebooks
-
-  CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--LabApp.token=''"]
+  ENV PYSPARK_PYTHON "/usr/bin/python3"

@@ -1,0 +1,13 @@
+uid: window
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  IMPORT ["from apache_beam.transforms import trigger"]
+  ARG/VAR ["window_duration_seconds", "60"]
+  ARG/VAR ["trigger_event_count", "10"]
+  WINDOW {"seconds": "window_duration_seconds", "count": "trigger_event_count"}
+

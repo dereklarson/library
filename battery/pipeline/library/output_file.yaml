@@ -1,0 +1,11 @@
+uid: output_file
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  # Here we signify an output via local file
+  ARG/STR ["output_obj1", "res.txt"]
+  OUTPUT/FILE {"file": "output_obj1"}

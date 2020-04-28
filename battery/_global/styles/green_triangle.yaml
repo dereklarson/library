@@ -1,0 +1,11 @@
+uid: green_triangle
+location: styles
+type: primitive
+text: |
+  {
+    "height": "0px",
+    "width": "0px",
+    "borderLeft": "50px solid transparent",
+    "borderRight": "50px solid transparent",
+    "borderTop": "100px solid red",
+  }

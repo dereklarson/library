@@ -6,14 +6,15 @@ text: |
   ## This installs the basic setup for a React app
   # Install node.js
   RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-  APTGET nodejs
+  APT nodejs
 
   # Start a project, populate with the JSX from your ./react directory
-  RUN npx create-react-app deployed_app
-  RUN rm -f /deployed_app/src/*
+  RUN npx create-react-app deployed_app && rm -f /deployed_app/src/*
   WORKDIR /deployed_app/
 
-  # Redux for managing data state effectively
+  # The core packages for our React project
+  # Axios connects the app to our backend, lodash is a utility function kit
   NPM axios lodash react-app-rewired
+  # Redux: manages data state effectively
   NPM redux react-redux redux-logger
   NPM redux-undo redux-thunk @reduxjs/toolkit

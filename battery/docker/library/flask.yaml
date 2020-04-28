@@ -1,0 +1,8 @@
+uid: flask
+location: docker
+dependencies:
+  - python
+text: |
+  ## This sets up Flask for hosting our React web app
+  # Also add packages with interfaces for other services
+  PIP flask flask-sse gunicorn GitPython docker

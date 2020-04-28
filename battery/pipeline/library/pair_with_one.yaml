@@ -1,0 +1,6 @@
+uid: pair_with_one
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  PAIR_WITH_ONE

@@ -2,5 +2,4 @@ uid: python_ext
 location: docker
 dependencies: ['python']
 text: |
-  ## This installs additional useful, specific python packages
-
+  # Additional heavy packages could go here

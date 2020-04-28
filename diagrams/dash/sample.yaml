@@ -1,0 +1,29 @@
+location: dash
+associations:
+  datasets: {}
+  library:
+    axis_controls:
+    - axis_controls
+    filterset:
+    - filterset
+    graph:
+    - graph
+  styles: {}
+corpus: {}
+vertices:
+  axis_controls:
+    uid: axis_controls
+    children:
+      graph: true
+    parents: {}
+  filterset:
+    uid: filterset
+    children:
+      graph: true
+    parents: {}
+  graph:
+    uid: graph
+    children: {}
+    parents:
+      axis_controls: true
+      filterset: true

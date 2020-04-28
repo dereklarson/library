@@ -1,0 +1,8 @@
+uid: nodejs
+location: docker
+dependencies: []
+text: |
+  ## This installs the basic setup for a React app
+  # Install node.js
+  RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  APT nodejs

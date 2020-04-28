@@ -1,0 +1,12 @@
+uid: ubuntu
+location: docker
+type: base
+dependencies: []
+text: |
+  FROM ubuntu:20.04
+
+  # User will be root until this is changed explicitly in a Dockerfile
+  # It is recommended to do this at some point late in the image hierarchy 
+  USER root
+
+  APT build-essential ssh-client git curl vim sudo wget cron

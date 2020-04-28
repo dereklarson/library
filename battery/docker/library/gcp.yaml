@@ -1,0 +1,13 @@
+uid: gcp
+location: docker
+dependencies:
+  - python
+text: |
+  ## This installs python tools for using Google Cloud Platform services
+  PIP google-auth google-auth-oauthlib google-api-python-client
+  PIP google-cloud-storage google-cloud-pubsub google-cloud-bigquery
+  PIP google-cloud-logging google-cloud-monitoring
+  # TODO apache-beam installation has flaky build due to fastavro. The below works
+  PIP fastavro==0.21.4
+  PIP apache-beam[gcp]
+  PIP google-resumable-media

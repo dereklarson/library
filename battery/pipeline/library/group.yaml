@@ -1,0 +1,10 @@
+uid: group
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  # Here we signify a GroupByKey op
+  GROUP_BY_KEY

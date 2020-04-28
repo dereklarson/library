@@ -1,0 +1,61 @@
+associations:
+  styles: {}
+  datasets: {}
+  library:
+    combine_per_key:
+    - combine_per_key
+    gcloud_runner:
+    - gcloud_runner
+    input_file:
+    - input_file
+    input_pubsub:
+    - input_pubsub
+    output_file:
+    - output_file
+    pair_with_one:
+    - pair_with_one
+    wordcount:
+    - wordcount
+corpus: {}
+location: pipeline
+vertices:
+  combine_per_key:
+    children:
+      output_file: true
+    parents:
+      pair_with_one: true
+    uid: combine_per_key
+  gcloud_runner:
+    children:
+      input_pubsub: true
+    parents: {}
+    uid: gcloud_runner
+  input_file:
+    children:
+      wordcount: true
+    parents: {}
+    uid: input_file
+  input_pubsub:
+    children:
+      wordcount: true
+    parents:
+      gcloud_runner: true
+    uid: input_pubsub
+  output_file:
+    children: {}
+    parents:
+      combine_per_key: true
+    uid: output_file
+  pair_with_one:
+    children:
+      combine_per_key: true
+    parents:
+      wordcount: true
+    uid: pair_with_one
+  wordcount:
+    children:
+      pair_with_one: true
+    parents:
+      input_file: true
+      input_pubsub: true
+    uid: wordcount

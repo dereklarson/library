@@ -1,0 +1,49 @@
+corpus: {}
+location: pipeline
+vertices:
+  combine_per_key:
+    children:
+      output_fw: true
+    parents:
+      tag: true
+    sections:
+    - combine_per_key
+    uid: combine_per_key
+  input_file:
+    children:
+      window: true
+    parents: {}
+    sections:
+    - input_file
+    uid: input_file
+  output_fw:
+    children: {}
+    parents:
+      combine_per_key: true
+    sections:
+    - output_fw
+    uid: output_fw
+  split:
+    children:
+      tag: true
+    parents:
+      window: true
+    sections:
+    - split
+    uid: split
+  tag:
+    children:
+      combine_per_key: true
+    parents:
+      split: true
+    sections:
+    - tag
+    uid: tag
+  window:
+    children:
+      split: true
+    parents:
+      input_file: true
+    sections:
+    - window
+    uid: window

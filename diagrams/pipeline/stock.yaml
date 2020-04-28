@@ -1,0 +1,42 @@
+corpus: {}
+location: pipeline
+vertices:
+  group_mean:
+    children:
+      output_file: true
+    parents:
+      tag: true
+    sections:
+    - group
+    - mean
+    uid: group_mean
+  input_file:
+    children:
+      split: true
+    parents: {}
+    sections:
+    - input_file
+    uid: input_file
+  output_file:
+    children: {}
+    parents:
+      group_mean: true
+    sections:
+    - output_file
+    uid: output_file
+  split:
+    children:
+      tag: true
+    parents:
+      input_file: true
+    sections:
+    - split
+    uid: split
+  tag:
+    children:
+      group_mean: true
+    parents:
+      split: true
+    sections:
+    - tag
+    uid: tag

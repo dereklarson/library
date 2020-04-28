@@ -1,0 +1,11 @@
+uid: output_bq
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  ARG/STR ["output_table_schema", "{'team': 'STRING'}"]
+  ARG/VAR ["output_table_locator", "['table', 'dataset', 'project']"]
+  OUTPUT/BQ {"table_locator": "output_table_locator", "schema": "output_table_schema"}

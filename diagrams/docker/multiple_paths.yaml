@@ -1,0 +1,14 @@
+# This file defines a full sample diagram configuration
+name: multiple_paths
+location: diagrams
+paths:
+  - 
+    - uid: ubuntu
+    - uid: python
+    - uid: metadocker
+    - uid: nodejs
+  -
+    - uid: ubuntu
+    - uid: python
+    - uid: gcp
+    - uid: jupyterlab

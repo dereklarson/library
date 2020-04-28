@@ -1,0 +1,14 @@
+uid: parse_game
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element)
+  def process(self, elem):
+      row = list(csv.reader([elem]))[0]
+      yield {
+        'user': row[0],
+        'team': row[1],
+        'score': int(row[2]),
+      }

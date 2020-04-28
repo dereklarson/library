@@ -1,0 +1,9 @@
+uid: red_square
+location: styles
+type: primitive
+text: |
+  {
+    "backgroundColor": "red",
+    "height": "100px",
+    "width": "100px",
+  }

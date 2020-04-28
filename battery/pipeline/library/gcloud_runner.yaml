@@ -1,0 +1,15 @@
+uid: gcloud_runner
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+  IMPORT ["from apache_beam.options.pipeline_options import GoogleCloudOptions"]
+
+  ARG/VAR ["gco", "options.view_as(GoogleCloudOptions)"]
+  ARG/STR ["gco.project", "backend-243722"]
+  ARG/STR ["gco.job_name", "automated-beam-test-stock"]
+  ARG/STR ["gco.staging_location", "gs://carbon-dataflow/staging"]
+  ARG/STR ["gco.temp_location", "gs://carbon-dataflow/temp"]
+  ARG/STR ["options.view_as(StandardOptions).runner", "DataflowRunner"]

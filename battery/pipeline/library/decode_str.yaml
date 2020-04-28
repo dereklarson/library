@@ -1,0 +1,10 @@
+uid: decode_str
+location: pipeline
+type: beam
+dependencies: []
+text: |
+  ## This Python code will be inserted into an Apache Beam pipeline
+  # It must be a function process(self, element) or be a fundamental transform
+
+  # Simply decode a bytestring assuming UTF-8 encoding
+  DECODE
