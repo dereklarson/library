@@ -5,5 +5,5 @@ text: |
   {
       "type": "filters",
       "position": [1, 0],
-      "args": {"columns": ["state"]}
+      "args": {}
   }
