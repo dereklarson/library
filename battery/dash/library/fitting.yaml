@@ -1,0 +1,9 @@
+uid: fit_controls
+location: dash
+dependencies: []
+text: |
+  {
+    "type": "fit_controls",
+    "position": [0, 4],
+    "args": {}
+  }
